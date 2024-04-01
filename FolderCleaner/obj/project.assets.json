@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Vitek\\C# Projects\\FolderCleaner_Bot\\FolderCleaner\\FolderCleaner.csproj",
+      "projectUniqueName": "D:\\Vitek\\C# Projects\\Folder_Cleaner_Bot_UI\\FolderCleaner\\FolderCleaner.csproj",
       "projectName": "FolderCleaner",
-      "projectPath": "D:\\Vitek\\C# Projects\\FolderCleaner_Bot\\FolderCleaner\\FolderCleaner.csproj",
+      "projectPath": "D:\\Vitek\\C# Projects\\Folder_Cleaner_Bot_UI\\FolderCleaner\\FolderCleaner.csproj",
       "packagesPath": "C:\\Users\\victo\\.nuget\\packages\\",
-      "outputPath": "D:\\Vitek\\C# Projects\\FolderCleaner_Bot\\FolderCleaner\\obj\\",
+      "outputPath": "D:\\Vitek\\C# Projects\\Folder_Cleaner_Bot_UI\\FolderCleaner\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

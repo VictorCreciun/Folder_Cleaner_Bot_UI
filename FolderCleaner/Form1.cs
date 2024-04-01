@@ -20,22 +20,33 @@ namespace FolderCleaner
 
         private void startButton_Click(object sender, EventArgs e)
         {
-            string[] files = Directory.GetFiles(folderBrowserDialog1.SelectedPath, "*.*", SearchOption.AllDirectories);
-            DateTime currentTime = DateTime.Now;
-            Console.WriteLine(currentTime);
-
-            foreach (var file in files)
+            if (!string.IsNullOrEmpty(pathBox.Text))
             {
-                var fileInfo = new FileInfo(file);
-                Console.WriteLine($"{file} : {fileInfo.LastAccessTime}");
+                string[] files = Directory.GetFiles(folderBrowserDialog1.SelectedPath, "*.*", SearchOption.AllDirectories);
+                DateTime currentTime = DateTime.Now;
+                Console.WriteLine(currentTime);
 
-                if (fileInfo.LastAccessTime < currentTime.AddMinutes(-1))
+                foreach (var file in files)
                 {
-                    Console.WriteLine($"Deleting file {file}");
-                    File.Delete(file);
-                }
+                    var fileInfo = new FileInfo(file);
+                    Console.WriteLine($"{file} : {fileInfo.LastAccessTime}");
 
+                    if (fileInfo.LastAccessTime < currentTime.AddMinutes(-1))
+                    {
+                        Console.WriteLine($"Deleting file {file}");
+                        File.Delete(file);
+                    }
+                }
             }
+            else
+            {
+                MessageBox.Show("Please, insert a path or use the browse button to select a directory path.", "Path Missing!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
